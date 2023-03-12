@@ -486,15 +486,15 @@ deps = {
   'src/tools/luci-go': {
       'packages': [
         {
-          'package': 'infra/tools/luci/isolate/${{platform}}',
+          'package': 'infra/tools/luci/isolate/mac-amd64',
           'version': 'git_revision:83c3df996b224edf5061840744395707a0e513e7',
         },
         {
-          'package': 'infra/tools/luci/isolated/${{platform}}',
+          'package': 'infra/tools/luci/isolated/mac-amd64',
           'version': 'git_revision:83c3df996b224edf5061840744395707a0e513e7',
         },
         {
-          'package': 'infra/tools/luci/swarming/${{platform}}',
+          'package': 'infra/tools/luci/swarming/mac-amd64',
           'version': 'git_revision:83c3df996b224edf5061840744395707a0e513e7',
         },
       ],
