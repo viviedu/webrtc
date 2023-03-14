@@ -1,0 +1,18 @@
+steps:
+  - input: ":construction: Build"
+    key: build_input
+
+  - label: ":pipeline: Build"
+    key: build
+    depends_on:
+      - build_input
+    agents:
+      queue: v3-mac-arm64
+    command: .buildkite/scripts/build.sh
+    env:
+      - BUILDKITE_BRANCH
+      - BUILDKITE_REPO
+    plugins:
+      - artifacts#v1.3.0:
+          upload:
+            - artifacts/WebRTC.framework.zip
